@@ -1,0 +1,23 @@
+.bordure {
+   border: solid 3px;
+   border-radius: 15px;
+   padding-left: 20px;
+   padding-right: 20px;
+   margin-bottom: 2%;
+   width: 400px;
+   background-color: white;
+  
+}
+.homme  {
+   width: 50px;
+   height: 50px;
+  
+   
+}
+.bordure2 {
+   display: flex;
+   justify-content: space-between;
+}
+
+
+

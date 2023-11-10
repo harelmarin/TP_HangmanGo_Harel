@@ -1,0 +1,37 @@
+{{define "var"}}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content ="IE-edge">
+    <meta name="viewport" content="width=devicewidth, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/style.css" />
+    <title>Mon Serveur Local Go</title>
+</head>
+<body>
+
+
+    <h1><strong>Informations sur la promotion : </strong></h1>
+    <p> <strong>Nom : </strong>{{.Nom}} </p>
+    <p> <strong>Filière : </strong>{{.Filière}} </p>
+    <p> <strong>Niveau : </strong>{{.Niveau}} </p>
+    <p> <strong>Nombre d'étudiant : </strong>{{.NBetudiant}} </p>
+    <h1><strong>Liste des étudiants : </strong></h1>
+    
+        {{range .Etudiants}}
+        <div class ="bordure">
+            <div class="bordure2">
+            <p>{{.Prenom}} {{.Nom}} </p> 
+            {{if .Sexe}}
+            <img class="homme" src="/static/img/Hommes.png" alt="Siglemasculin">
+            {{else}} 
+            <img src="/static/img/Femme.png" alt="Siglefeminin">
+            {{end}}
+            </div>
+            <p>{{.Age}}</p>
+        </div>
+    </div>
+            {{end}}
+    </body>
+    </html>
+{{end}}
