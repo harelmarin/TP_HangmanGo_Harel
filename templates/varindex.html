@@ -6,10 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content ="IE-edge">
     <meta name="viewport" content="width=devicewidth, initial-scale=1.0">
     <link rel="stylesheet" href="/static/css/style.css" />
-    <title>Mon Serveur Local Go</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap" rel="stylesheet">
+    <title>Route Promo</title>
 </head>
 <body>
-
+<div class ="rectangle">
 
     <h1><strong>Informations sur la promotion : </strong></h1>
     <p> <strong>Nom : </strong>{{.Nom}} </p>
@@ -21,17 +24,17 @@
         {{range .Etudiants}}
         <div class ="bordure">
             <div class="bordure2">
-            <p>{{.Prenom}} {{.Nom}} </p> 
+            <p>{{.Prenom}} {{.Nom}} <br> {{.Age}}</p>
             {{if .Sexe}}
             <img class="homme" src="/static/img/Hommes.png" alt="Siglemasculin">
             {{else}} 
-            <img src="/static/img/Femme.png" alt="Siglefeminin">
+            <img class="homme" src="/static/img/Femme.png" alt="Siglefeminin">
             {{end}}
             </div>
-            <p>{{.Age}}</p>
+            
         </div>
-    </div>
             {{end}}
+        </div>  
     </body>
     </html>
 {{end}}
